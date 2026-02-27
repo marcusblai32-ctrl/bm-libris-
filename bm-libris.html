@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Blaise Marcus - Auteur Chrétien</title>  
+    <meta name="description" content="Découvrez les romans chrétiens de Blaise Marcus : L'Alliance Divine, Pour l'Amour de Moi, et Le Journal de Shoshanna. Une exploration de la foi, de la grâce et de la guérison divine.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Pro:ital,wght@0,400;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <style>  
+        /* === CSS ORIGINAL (intégralement conservé) === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }  
+        body {   
+            font-family: 'DM Sans', sans-serif;   
+            background: linear-gradient(135deg, #fef9f3 0%, #fff7ed 100%);  
+            color: #3d2817;   
+            line-height: 1.6;   
+            overflow-x: hidden;   
+        }
+        /* NAVBAR */
+        nav {   
+            position: sticky;   
+            top: 0;   
+            z-index: 100;   
+            border-bottom: 1px solid rgba(212, 165, 116, 0.3);  
+            background: rgba(254, 249, 243, 0.95);   
+            backdrop-filter: blur(12px);  
+            padding: 15px 0;   
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);  
+        }  
+        .nav-wrapper {   
+            max-width: 1100px;   
+            margin: 0 auto;   
+            padding: 0 20px;   
+            display: flex;   
+            justify-content: space-between;   
+            align-items: center;   
+            position: relative;  
+        }  
+        .nav-logo {   
+            font-family: 'Playfair Display', serif;   
+            font-weight: 900;   
+            font-size: 1.4rem;   
+            background: linear-gradient(135deg, #3d2817, #8b5a2b);  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+            text-decoration: none;   
+            display: flex;   
+            align-items: center;   
+            gap: 10px;   
+        }  
+        .nav-logo i {   
+            background: linear-gradient(135deg, #d4a574, #c99d5f);  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+        .menu-toggle {  
+            display: none;  
+            font-size: 1.8rem;  
+            cursor: pointer;  
+            color: #3d2817;  
+            z-index: 101;  
+            background: none;  
+            border: none;  
+            transition: transform 0.3s;  
+        }  
+        .menu-toggle:hover {  
+            transform: scale(1.1);  
+            color: #d4a574;  
+        }  
+        .nav-menu {   
+            display: flex;   
+            gap: 30px;   
+            align-items: center;   
+            list-style: none;   
+        }  
+        .nav-link {   
+            text-decoration: none;   
+            font-size: 0.95rem;   
+            font-weight: 500;   
+            color: #6b5d4f;   
+            transition: color 0.3s;  
+            position: relative;  
+            white-space: nowrap;  
+        }  
+        .nav-link::after {  
+            content: '';  
+            position: absolute;  
+            bottom: -5px;  
+            left: 0;  
+            width: 0;  
+            height: 2px;  
+            background: linear-gradient(135deg, #d4a574, #c99d5f);  
+            transition: width 0.3s;  
+        }  
+        .nav-link:hover::after { width: 100%; }  
+        .nav-link:hover { color: #3d2817; }  
+        .nav-cta {   
+            padding: 10px 20px;   
+            border-radius: 8px;   
+            background: linear-gradient(135deg, #d4a574, #c99d5f);  
+            color: white;   
+            text-decoration: none;   
+            font-weight: 600;   
+            font-size: 0.85rem;  
+            white-space: nowrap;  
+            transition: transform 0.3s;  
+        }  
+        .nav-cta:hover {  
+            transform: translateY(-2px);  
+        }  
+
+        /* CARROUSEL 3D */
+        .books-carousel-section {  
+            padding: 80px 0 60px;  
+        }  
+        .carousel-title {  
+            text-align: center;  
+            font-family: 'Playfair Display', serif;  
+            font-size: 3rem;  
+            margin-bottom: 20px;  
+            color: #3d2817;  
+        }  
+        .carousel-subtitle {  
+            text-align: center;  
+            color: #8b7356;  
+            font-size: 1.1rem;  
+            margin-bottom: 50px;  
+            font-style: italic;  
+        }  
+        .carousel-container {  
+            position: relative;  
+            max-width: 1100px;  
+            margin: 0 auto;  
+            padding: 20px 0;  
+        }  
+        .carousel-track {  
+            display: flex;  
+            gap: 30px;  
+            overflow-x: auto;  
+            scroll-snap-type: x mandatory;  
+            padding: 30px 20px 40px;  
+            scrollbar-width: thin;  
+            scrollbar-color: #d4a574 #f5f1e8;  
+            -ms-overflow-style: auto;  
+            scroll-behavior: smooth;  
+        }  
+        .carousel-track::-webkit-scrollbar {  
+            height: 8px;  
+        }  
+        .carousel-track::-webkit-scrollbar-track {  
+            background: #f5f1e8;  
+            border-radius: 10px;  
+        }  
+        .carousel-track::-webkit-scrollbar-thumb {  
+            background: linear-gradient(135deg, #d4a574, #b8864b);  
+            border-radius: 10px;  
+        }  
+        .carousel-item {  
+            flex: 0 0 300px;  
+            scroll-snap-align: start;  
+            perspective: 1200px;  
+            transition: transform 0.3s;  
+            display: flex;  
+            flex-direction: column;  
+        }  
+        .carousel-item:hover { transform: translateY(-10px); }  
+          
+        /* LIVRE 3D */
+        .book-container {   
+            perspective: 1200px;   
+            width: 100%;   
+            height: 400px;   
+            display: flex;   
+            align-items: center;   
+            justify-content: center;   
+            margin-bottom: 15px;  
+        }  
+        .book-wrapper {   
+            position: relative;   
+            width: 280px;   
+            height: 400px;   
+            transform-style: preserve-3d;   
+            transition: transform 0.8s ease;   
+            cursor: pointer;  
+        }  
+        .book-wrapper:hover { transform: rotateY(25deg) scale(1.05); }  
+        .book-back {   
+            position: absolute;   
+            width: 100%;   
+            height: 100%;   
+            background: linear-gradient(135deg, #4a2d1a, #2c1810);  
+            border-radius: 0 8px 8px 0;   
+            z-index: 1;   
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);  
+        }  
+        .book-spine {   
+            position: absolute;   
+            left: 0;   
+            top: 0;   
+            width: 25px;   
+            height: 100%;   
+            background: linear-gradient(135deg, #2c1810, #1a0f09);  
+            z-index: 3;   
+            transform: translateX(-12px) rotateY(-90deg);   
+            border-radius: 4px 0 0 4px;  
+        }  
+        .book-front {   
+            position: absolute;   
+            width: 100%;   
+            height: 100%;   
+            background: linear-gradient(135deg, #d4a574, #c99d5f);  
+            border-radius: 8px;   
+            z-index: 4;   
+            transform-origin: left;   
+            transition: transform 0.8s ease;   
+            display: flex;   
+            flex-direction: column;   
+            align-items: center;   
+            justify-content: center;   
+            color: white;   
+            text-align: center;   
+            padding: 20px;   
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.2);  
+        }  
+        .book-front::before {  
+            content: '';  
+            position: absolute;  
+            top: 10px;  
+            left: 10px;  
+            right: 10px;  
+            bottom: 10px;  
+            border: 1px solid rgba(255,255,255,0.3);  
+            border-radius: 4px;  
+            pointer-events: none;  
+        }  
+        .book-wrapper:hover .book-front { transform: rotateY(-145deg); }  
+        .book-pages {   
+            position: absolute;   
+            left: 5px;   
+            top: 5px;   
+            width: calc(100% - 10px);   
+            height: calc(100% - 10px);   
+            background: white;   
+            z-index: 2;   
+            border-radius: 0 5px 5px 0;   
+            overflow-y: auto;  
+            box-shadow: inset -2px 0 5px rgba(0,0,0,0.1);  
+            background: linear-gradient(135deg, #ffffff, #faf7f2);  
+        }  
+
+        /* INFOS LIVRE AK BOUTON YO */
+        .book-info {  
+            text-align: center;  
+            padding: 20px;  
+        }  
+        .book-info h4 {  
+            font-family: 'Playfair Display', serif;  
+            font-size: 1.3rem;  
+            color: #3d2817;  
+            margin-bottom: 10px;  
+        }  
+        .book-info p {  
+            color: #d4a574;  
+            font-weight: 500;  
+            font-size: 1rem;  
+            margin-bottom: 15px;  
+        }  
+        .book-info .divider {  
+            width: 40px;  
+            height: 2px;  
+            background: linear-gradient(135deg, #d4a574, #b8864b);  
+            margin: 15px auto;  
+        }  
+
+        /* BOUTON POU PLATEFÒM LIV */
+        .platform-buttons {  
+            display: flex;  
+            flex-direction: column;  
+            gap: 10px;  
+            margin-top: 15px;  
+            width: 100%;  
+        }  
+        .platform-btn {  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            gap: 10px;  
+            padding: 12px 15px;  
+            color: white;  
+            text-decoration: none;  
+            border-radius: 8px;  
+            font-size: 0.9rem;  
+            font-weight: 600;  
+            transition: all 0.3s;  
+            border: none;  
+            cursor: pointer;  
+        }  
+        .platform-btn:hover {  
+            transform: translateY(-3px);  
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);  
+        }  
+        .platform-btn i {  
+            font-size: 1.1rem;  
+        }  
+        .platform-btn.amazon { background: #ff9900; }  
+        .platform-btn.fnac { background: #e30019; }  
+        .platform-btn.librairie { background: #3d2817; }  
+        .platform-btn.ebook { background: #4a6fa5; }  
+        .platform-btn.audio { background: #9b59b6; }  
+        .platform-btn.default { background: #999; }  
+
+        /* SECTION OTÈ AK REZO SOSYO */
+        .author-section {
+            background: white;
+            padding: 80px 0;
+            border-top: 1px solid #e8dfd0;
+            border-bottom: 1px solid #e8dfd0;
+        }
+        .author-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .author-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border: 5px solid #d4a574;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .author-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #3d2817;
+            margin-bottom: 10px;
+        }
+        .author-title {
+            color: #d4a574;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .author-bio {
+            font-size: 1.1rem;
+            color: #6b5d4f;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        .author-social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: white;
+            font-size: 0.95rem;
+        }
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .social-btn.facebook { background: #1877f2; }
+        .social-btn.instagram {   
+            background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5);  
+        }
+        .social-btn.x { background: #000000; }
+        .social-btn.tiktok { background: #000000; }
+        .social-btn.youtube { background: #ff0000; }
+        .social-btn.linkedin { background: #0077b5; }
+        .social-btn.default { background: #6b5d4f; }
+
+        /* BOUTON REZO SOSYO PRENSIPAL YO */
+        .social-buttons {  
+            display: flex;  
+            flex-wrap: wrap;  
+            gap: 15px;  
+            justify-content: center;  
+            margin-top: 30px;  
+        }  
+        .social-btn.platform {  
+            display: inline-flex;  
+            align-items: center;  
+            justify-content: center;  
+            gap: 8px;  
+            padding: 12px 25px;  
+            border-radius: 50px;  
+            text-decoration: none;  
+            font-weight: 600;  
+            transition: all 0.3s;  
+            color: white;  
+        }  
+
+        /* NAVIGATION CARROUSEL */
+        .carousel-nav {  
+            display: flex;  
+            justify-content: center;  
+            gap: 20px;  
+            margin-top: 20px;  
+        }  
+        .carousel-btn {  
+            width: 50px;  
+            height: 50px;  
+            border-radius: 50%;  
+            background: white;  
+            border: 2px solid #d4a574;  
+            color: #d4a574;  
+            cursor: pointer;  
+            transition: all 0.3s;  
+            font-size: 1.2rem;  
+            box-shadow: 0 5px 15px rgba(212, 165, 116, 0.2);  
+        }  
+        .carousel-btn:hover {  
+            background: linear-gradient(135deg, #d4a574, #b8864b);  
+            color: white;  
+            transform: scale(1.1);  
+        }  
+
+        /* STATS */
+        .stats-section {   
+            background: linear-gradient(135deg, #f5f1e8, #efe9de);  
+            padding: 40px 0;   
+            border-top: 1px solid #e8dfd0;  
+            border-bottom: 1px solid #e8dfd0;  
+        }  
+        .stats-grid {   
+            display: grid;   
+            grid-template-columns: repeat(4, 1fr);   
+            text-align: center;   
+            max-width: 1100px;  
+            margin: 0 auto;  
+            padding: 0 20px;  
+            gap: 30px;  
+        }  
+        .stat-number {   
+            font-family: 'Playfair Display', serif;   
+            font-size: 2.5rem;   
+            color: #d4a574;   
+            font-weight: 800;   
+        }  
+        .stat-label { font-size: 1rem; color: #6b5d4f; }  
+
+        /* TESTIMONIALS (commenté mais conservé) */
+        .testimonial-card {   
+            background: white;   
+            padding: 30px;   
+            border-radius: 12px;   
+            border: 1px solid #e8dfd0;   
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);  
+            transition: transform 0.3s;  
+        }  
+        .testimonial-card:hover { transform: translateY(-5px); }  
+        .testimonials-grid {   
+            display: grid;   
+            grid-template-columns: 1fr 1fr;   
+            gap: 30px;   
+            max-width: 1100px;  
+            margin: 40px auto 0;  
+            padding: 0 20px;  
+        }  
+
+        /* CTA */
+        #commander {  
+            background: linear-gradient(135deg, #2c1810, #3d2817);  
+            color: white;   
+            padding: 80px 0;   
+            text-align: center;  
+        }  
+        #commander h2 {   
+            font-family: 'Playfair Display';   
+            font-size: 2.5rem;   
+            margin-bottom: 20px;  
+        }  
+        .btn-primary {   
+            padding: 16px 32px;   
+            background: linear-gradient(135deg, #d4a574, #b8864b);  
+            color: white;   
+            border-radius: 12px;   
+            text-decoration: none;   
+            font-weight: 700;   
+            display: inline-block;  
+            transition: transform 0.3s;  
+            font-size: 1.1rem;
+        }  
+        .btn-primary:hover {  
+            transform: translateY(-3px);  
+        }  
+
+        /* FOOTER */
+        footer {
+            padding: 40px 0; 
+            text-align: center; 
+            background: #f5f1e8; 
+            font-size: 0.9rem; 
+            color: #6b5d4f;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {  
+            .stats-grid {  
+                grid-template-columns: repeat(2, 1fr);  
+            }  
+        }  
+        @media (max-width: 768px) {   
+            .menu-toggle {  
+                display: block;  
+            }  
+            .nav-menu {  
+                position: absolute;  
+                top: 100%;  
+                left: 0;  
+                right: 0;  
+                width: 100%;  
+                background: white;  
+                flex-direction: column;  
+                gap: 15px;  
+                padding: 20px;  
+                border-bottom: 1px solid #e8dfd0;  
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);  
+                display: none;  
+                z-index: 99;  
+            }  
+            .nav-menu.active {  
+                display: flex;  
+            }  
+            .testimonials-grid {   
+                grid-template-columns: 1fr;   
+            }  
+            .stats-grid {   
+                grid-template-columns: 1fr;   
+            }  
+            .carousel-title {  
+                font-size: 2.2rem;  
+            }  
+            .carousel-item {  
+                flex: 0 0 260px;  
+            }  
+            .book-wrapper {  
+                width: 240px;  
+                height: 350px;  
+            }  
+            .author-photo {  
+                width: 150px;  
+                height: 150px;  
+            }  
+            .author-name {  
+                font-size: 2rem;  
+            }  
+            .social-buttons {  
+                flex-direction: column;  
+                align-items: center;  
+            }  
+            .social-btn {  
+                width: 80%;  
+            }  
+        }  
+        @media (max-width: 480px) {  
+            .nav-logo {  
+                font-size: 1.2rem;  
+            }  
+            .carousel-title {  
+                font-size: 1.8rem;  
+            }  
+            .carousel-item {  
+                flex: 0 0 220px;  
+            }  
+            .book-wrapper {  
+                width: 200px;  
+                height: 300px;  
+            }  
+        }  
+
+        /* === AJOUTS MODERNES (design raffiné, rien n'est retiré) === */
+        :root {
+            --color-primary: #d4a574;
+            --color-dark: #3d2817;
+            --color-soft-bg: #fef9f3;
+            --shadow-elevation: 0 20px 35px -10px rgba(0,0,0,0.15);
+            --shadow-hover: 0 30px 45px -15px rgba(212,165,116,0.3);
+            --glass-effect: rgba(255,255,255,0.2);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: linear-gradient(145deg, #fef9f3 0%, #f5e9dd 100%);
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(circle at 20% 30%, rgba(212,165,116,0.03) 0%, transparent 30%),
+                              radial-gradient(circle at 80% 70%, rgba(185,130,80,0.03) 0%, transparent 30%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        nav {
+            background: rgba(254, 249, 243, 0.85);
+            backdrop-filter: blur(16px) saturate(180%);
+            box-shadow: 0 8px 25px rgba(61,40,23,0.08);
+            border-bottom: 1px solid rgba(212,165,116,0.25);
+        }
+        .nav-logo {
+            letter-spacing: -0.02em;
+        }
+        .nav-cta {
+            box-shadow: 0 8px 16px -6px rgba(212,165,116,0.4);
+        }
+        .carousel-title, .author-name {
+            text-shadow: 2px 2px 8px rgba(212,165,116,0.15);
+        }
+        .carousel-item {
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+        }
+        .book-wrapper {
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .book-wrapper:hover {
+            transform: rotateY(25deg) scale(1.08);
+            filter: drop-shadow(0 25px 30px rgba(0,0,0,0.25));
+        }
+        .platform-btn {
+            border-radius: 12px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 8px 16px -8px rgba(0,0,0,0.2);
+            transition: all 0.25s ease;
+        }
+        .platform-btn:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 25px -10px currentColor;
+        }
+        .social-btn {
+            border-radius: 60px;
+            padding: 12px 28px;
+            font-weight: 600;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+            transition: all 0.25s ease;
+            border: 1px solid rgba(255,255,255,0.15);
+            backdrop-filter: blur(2px);
+        }
+        .social-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 25px -8px currentColor;
+        }
+        .author-container {
+            background: rgba(255,255,255,0.6);
+            padding: 40px 30px;
+            border-radius: 32px;
+            box-shadow: 0 25px 45px -18px rgba(61,40,23,0.2);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(212,165,116,0.2);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .author-bio {
+            font-weight: 350;
+            line-height: 1.8;
+        }
+        #commander {
+            background: linear-gradient(125deg, #2c1810, #3d2817, #5a3e28);
+            position: relative;
+            isolation: isolate;
+        }
+        #commander::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(255,215,160,0.1), transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        .btn-primary {
+            box-shadow: 0 20px 35px -12px #b27d48;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-primary:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 30px 45px -12px #b8864b;
+        }
+        footer {
+            background: #ede3d7;
+            border-top: 1px solid rgba(212,165,116,0.3);
+            color: #5a4a38;
+        }
+        footer a {
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: #b8864b;
+            text-decoration: underline wavy #d4a574 1px;
+        }
+        .stats-section {
+            background: linear-gradient(135deg, #f5ede2, #f0e5d8);
+            box-shadow: inset 0 5px 12px rgba(212,165,116,0.1), inset 0 -5px 12px rgba(0,0,0,0.02);
+        }
+        .stat-number {
+            background: linear-gradient(145deg, #d4a574, #b27d48);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 3rem;
+        }
+        .carousel-btn {
+            backdrop-filter: blur(8px);
+            background: rgba(255,255,255,0.75);
+            border: 1px solid rgba(212,165,116,0.6);
+            font-size: 1.3rem;
+            transition: 0.25s;
+        }
+        .carousel-btn:hover {
+            background: linear-gradient(145deg, #d4a574, #c5925a);
+            border-color: white;
+            box-shadow: 0 8px 25px #d4a574;
+        }
+        /* animations subtiles sur les icônes */
+        .fas, .fab, .far {
+            transition: transform 0.2s;
+        }
+        a:hover .fas, a:hover .fab {
+            transform: scale(1.15);
+        }
+    </style>
+</head>  
+<body>  
+    <nav>  
+        <div class="nav-wrapper">  
+            <a href="#" class="nav-logo"><i class="fas fa-book-open"></i>BM Libris</a>  
+            <button class="menu-toggle" id="menuToggle">  
+                <i class="fas fa-bars"></i>  
+            </button>  
+            <ul class="nav-menu" id="navMenu">  
+                <li><a href="#catalogue" class="nav-link">Catalogue</a></li>  
+                <!-- <li><a href="#avis" class="nav-link">Avis</a></li>   -->
+                <li><a href="#auteur" class="nav-link">L'auteur</a></li>  
+                <li><a href="#commander" class="nav-cta">Commander</a></li>  
+            </ul>  
+        </div>  
+    </nav>  
+
+    <main>  
+        <!-- CARROUSEL DES LIVRES -->  
+        <section class="books-carousel-section" id="catalogue">  
+            <h2 class="carousel-title">Les livres de Blaise Marcus</h2>  
+            <p class="carousel-subtitle">Découvrez ses dernières œuvres</p>  
+              
+            <div class="carousel-container">  
+                <div class="carousel-track" id="bookCarousel">  
+                    <!-- LIVRE 1: L'Alliance Divine -->  
+                    <div class="carousel-item">  
+                        <div class="book-container">  
+                            <div class="book-wrapper">  
+                                <div class="book-spine"></div>  
+                                <div class="book-back"></div>  
+                                <div class="book-front">  
+                                    <small>Blaise Marcus</small>  
+                                    <h3>L'Alliance Divine</h3>  
+                                    <div style="width:40px; height:2px; background:white; margin:15px 0;"></div>  
+                                    <p style="font-size:0.8rem;">Fiction chrétienne</p>  
+                                </div>  
+                                <div class="book-pages">  
+                                    <div class="book-info">  
+                                        <h4>L'Alliance Divine</h4>  
+                                        <p>Blaise Marcus</p>  
+                                        <div class="divider"></div>  
+                                        <div style="font-size:0.9rem; color:#8b7356; margin-bottom:10px;">Mystère de communion et de salut</div>  
+                                          
+                                        <div class="platform-buttons">  
+                                            <a href="https://www.amazon.fr/dp/B0G6GJY89G" target="_blank" class="platform-btn amazon">  
+                                                <i class="fab fa-kindle"></i> Amazon Kindle  
+                                            </a>  
+                                            <!-- <a href="https://www.amazon.fr/dp/B0G6GJY89G" target="_blank" class="platform-btn ebook">  
+                                                <i class="fas fa-tablet-alt"></i> Version numérique  
+                                            </a>   -->
+                                       </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div style="text-align: center; margin-top: 15px;">  
+                            <h3 style="font-family: 'Playfair Display';">L'Alliance Divine</h3>  
+                            <p style="color: #d4a574;">Blaise Marcus</p>  
+                        </div>  
+                    </div>  
+
+                    <!-- LIVRE 2: Pour l'Amour de Moi -->  
+                    <div class="carousel-item">  
+                        <div class="book-container">  
+                            <div class="book-wrapper">  
+                                <div class="book-spine"></div>  
+                                <div class="book-back"></div>  
+                                <div class="book-front">  
+                                    <small>Blaise Marcus</small>  
+                                    <h3>Pour l'Amour de Moi</h3>  
+                                    <div style="width:40px; height:2px; background:white; margin:15px 0;"></div>  
+                                    <p style="font-size:0.8rem;">Roman allégorique</p>  
+                                </div>  
+                                <div class="book-pages">  
+                                    <div class="book-info">  
+                                        <h4>Pour l'Amour de Moi</h4>  
+                                        <p>Blaise Marcus</p>  
+                                        <div class="divider"></div>  
+                                        <div style="font-size:0.9rem; color:#8b7356; margin-bottom:10px;">Quand la liberté humaine rencontre le dessein divin</div>  
+                                          
+                                        <div class="platform-buttons">  
+                                            <a href="https://www.amazon.fr/dp/B0G6KG686B" target="_blank" class="platform-btn amazon">  
+                                                <i class="fab fa-kindle"></i> Amazon Kindle  
+                                            </a>  
+                                            <!-- <a href="https://www.amazon.fr/dp/B0G6KG686B" target="_blank" class="platform-btn ebook">  
+                                                <i class="fas fa-tablet-alt"></i> Version numérique  
+                                            </a>   -->
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div style="text-align: center; margin-top: 15px;">  
+                            <h3 style="font-family: 'Playfair Display';">Pour l'Amour de Moi</h3>  
+                            <p style="color: #d4a574;">Blaise Marcus</p>  
+                        </div>  
+                    </div>  
+
+                    <!-- LIVRE 3: Le Journal de Shoshanna -->  
+                    <div class="carousel-item">  
+                        <div class="book-container">  
+                            <div class="book-wrapper">  
+                                <div class="book-spine"></div>  
+                                <div class="book-back"></div>  
+                                <div class="book-front">  
+                                    <small>Blaise Marcus</small>  
+                                    <h3>Shoshanna, la femme effleurée</h3>  
+                                    <div style="width:40px; height:2px; background:white; margin:15px 0;"></div>  
+                                    <p style="font-size:0.8rem;">Roman biblique</p>  
+                                </div>  
+                                <div class="book-pages">  
+                                    <div class="book-info">  
+                                        <h4>Shoshanna, la femme effleurée</h4>  
+                                        <p>Blaise Marcus</p>  
+                                        <div class="divider"></div>  
+                                        <div style="font-size:0.9rem; color:#8b7356; margin-bottom:10px;">Méditation sur l'anatomie d'un toucher qui sauve</div>  
+                                          
+                                        <div class="platform-buttons">  
+                                            <a href="https://www.amazon.fr/dp/B0G6ZGMHB4" target="_blank" class="platform-btn amazon">  
+                                                <i class="fab fa-kindle"></i> Amazon Kindle  
+                                            </a>  
+                                            <!-- <a href="https://www.amazon.fr/dp/B0G6ZGMHB4" target="_blank" class="platform-btn ebook">  
+                                                <i class="fas fa-tablet-alt"></i> Version numérique  
+                                            </a>   -->
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
+                        </div>  
+                        <div style="text-align: center; margin-top: 15px;">  
+                            <h3 style="font-family: 'Playfair Display';">Shoshanna, la femme effleurée</h3>  
+                            <p style="color: #d4a574;">Blaise Marcus</p>  
+                        </div>  
+                    </div>  
+                </div>  
+                  
+                <div class="carousel-nav">  
+                    <button class="carousel-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>  
+                    <button class="carousel-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>  
+                </div>  
+            </div>  
+        </section>  
+
+        <!-- STATS -->  
+        <section class="stats-section">  
+            <div class="stats-grid">  
+                <div>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">livres publiés</div>
+                </div>  
+                <div>
+                    <!--<div class="stat-number">4.8</div>
+                    <div class="stat-label">Note moyenne</div> -->
+                </div> 
+                <div>
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Langues</div>
+                </div>  
+                <div>
+                    <div class="stat-number">#1</div>
+                    <div class="stat-label">Meilleure vente</div>
+                </div>  
+            </div>  
+        </section>  
+
+        <!--TESTIMONIALS (conservé commenté)   
+        <section id="avis" style="padding: 80px 0;">  
+            <h2 style="text-align:center; font-family:'Playfair Display'; font-size:2.5rem; margin-bottom:20px;">Avis des lecteurs</h2>  
+            <p style="text-align:center; color:#8b7356; margin-bottom:50px;">Ce qu'ils pensent des livres de Blaise Marcus</p>  
+            <div class="testimonials-grid">  
+                <div class="testimonial-card">  
+                    <div style="color:#f59e0b; margin-bottom:10px;">  
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>  
+                    </div>  
+                    <p><em>"L'Alliance Divine m'a profondément touchée. Une réflexion puissante sur la prédestination et la liberté humaine."</em></p>  
+                    <div style="margin-top:20px; font-weight:600; color:#d4a574;">- Sophie L.</div>  
+                </div>  
+                <div class="testimonial-card">  
+                    <div style="color:#f59e0b; margin-bottom:10px;">  
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>  
+                    </div>  
+                    <p><em>"Le Journal de Shoshanna est un chef-d'œuvre. J'ai pleuré, j'ai espéré, j'ai cru avec elle. Un livre que je recommande à tous."</em></p>  
+                    <div style="margin-top:20px; font-weight:600; color:#d4a574;">- Thomas R.</div>  
+                </div>  
+                <div class="testimonial-card">  
+                    <div style="color:#f59e0b; margin-bottom:10px;">  
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>  
+                    </div>  
+                    <p><em>"Pour l'Amour de Moi m'a fait comprendre la grâce d'une manière nouvelle. Blaise Marcus écrit avec une profondeur rare."</em></p>  
+                    <div style="margin-top:20px; font-weight:600; color:#d4a574;">- Marie-Claire D.</div>  
+                </div>  
+                <div class="testimonial-card">  
+                    <div style="color:#f59e0b; margin-bottom:10px;">  
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>  
+                    </div>  
+                    <p><em>"Une plume magnifique. Ses personnages sont profonds et ses intrigues captivantes."</em></p>  
+                    <div style="margin-top:20px; font-weight:600; color:#d4a574;">- David P.</div>  
+                </div>  
+            </div>  
+        </section>-->
+
+        <!-- SECTION AUTEUR - RECETTE DE FOI -->  
+        <section id="auteur" class="author-section">  
+            <div class="author-container">  
+                <!-- Si ou gen foto otè a, mete li isit -->
+             <!--     <img src="https://via.placeholder.com/200" alt="Blaise Marcus" class="author-photo"> --> 
+                <h2 class="author-name">Blaise Marcus</h2>  
+                <div class="author-title">Auteur chrétien</div>  
+                <div class="author-bio">  
+                    <p>Blaise Marcus est un auteur chrétien passionné d’écriture, de réflexion et de transmission de la foi. Originaire d’Haïti, il s’intéresse depuis son jeune âge aux réalités spirituelles, notamment la prédestination, la faveur de Dieu et la révélation de Dieu en Jésus-Christ.<br><br>
+À travers ses ouvrages, il cherche à apporter une compréhension plus profonde des vérités bibliques, tout en encourageant chacun à aligner sa vie avec sa destinée spirituelle. Son écriture se veut à la fois éclairante, accessible et transformative.<br><br>
+En dehors de l’écriture, il consacre son temps à l’apprentissage, à l’enseignement, à la musique et au développement de projets numériques, avec le désir constant d’impacter positivement sa génération.</p><br><br><hr>
+                        <h3 style="color:black;"><i class="fas fa-globe"></i> Réseaux Sociaux</h3>
+                    <p>Retrouvez-le sur sa page Facebook <strong>Recette de Foi</strong>, où il partage quotidiennement des méditations, des extraits de ses livres et des encouragements pour la vie spirituelle.</p>  
+                </div>  
+                <div class="author-social">  
+                    <!-- Lyen Recette de Foi Facebook -->
+                    <a href="https://www.facebook.com/recettedefoi" target="_blank" class="social-btn facebook">  
+                        <i class="fab fa-facebook-f"></i> Recette de Foi  
+                    </a>  
+                    <!-- Mete lòt lyen ou genyen yo isit 
+                    <a href="#" target="_blank" class="social-btn instagram">  
+                        <i class="fab fa-instagram"></i> Instagram  
+                    </a>  
+                    <a href="#" target="_blank" class="social-btn x">  
+                        <i class="fab fa-x-twitter"></i> X  
+                    </a>  
+                    <a href="#" target="_blank" class="social-btn tiktok">  
+                        <i class="fab fa-tiktok"></i> TikTok  
+                    </a>  
+                    <a href="#" target="_blank" class="social-btn youtube">  
+                        <i class="fab fa-youtube"></i> YouTube  
+                    </a>  
+                    <a href="#" target="_blank" class="social-btn linkedin">  
+                        <i class="fab fa-linkedin-in"></i> LinkedIn  
+                    </a>  -->
+                </div>  
+            </div>  
+        </section>  
+
+        <!-- CTA COMMANDER -->  
+        <section id="commander">  
+            <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">  
+                <h2>Commandez dès maintenant</h2>  
+                <p style="margin:20px 0 40px; opacity:0.9;">Retrouvez tous les livres de Blaise Marcus sur Amazon et dans toutes les bonnes librairies.</p>  
+                  
+                <a href="https://www.amazon.com/s?k=Blaise+Marcus&crid=3TC05YTLVZ3XQ&sprefix=blaise+marcus+%2Caps%2C423&ref=nb_sb_noss_2" target="_blank" class="btn-primary">  
+                    Voir tous les livres sur Amazon  
+                </a>  
+                  
+                <div style="margin-top:40px; display:flex; justify-content:center; gap:20px; opacity:0.8; font-size:0.9rem; flex-wrap:wrap;">    
+                    
+
+                    <span><i class="fas fa-check"></i> Gratuit avec Kindle Unlimited</span>  
+                    <span><i class="fas fa-check"></i> Version Kindle disponible</span>  
+                </div>  
+            </div>  
+        </section>  
+    </main>  
+
+    <footer>  
+        © 2026 Blaise Marcus - Tous droits réservés.   
+        <br>Retrouvez-moi sur <a href="https://www.facebook.com/recettedefoi" target="_blank" style="color: #d4a574; text-decoration: none;">Recette de Foi</a>  
+    </footer>  
+
+    <script>  
+        // Menu souvre sou klik  
+        const menuToggle = document.getElementById('menuToggle');  
+        const navMenu = document.getElementById('navMenu');  
+          
+        if (menuToggle && navMenu) {  
+            menuToggle.addEventListener('click', (e) => {  
+                e.stopPropagation();  
+                navMenu.classList.toggle('active');  
+                const icon = menuToggle.querySelector('i');  
+                if (navMenu.classList.contains('active')) {  
+                    icon.classList.remove('fa-bars');  
+                    icon.classList.add('fa-times');  
+                } else {  
+                    icon.classList.remove('fa-times');  
+                    icon.classList.add('fa-bars');  
+                }  
+            });  
+              
+            document.querySelectorAll('.nav-link, .nav-cta').forEach(link => {  
+                link.addEventListener('click', () => {  
+                    navMenu.classList.remove('active');  
+                    const icon = menuToggle.querySelector('i');  
+                    icon.classList.remove('fa-times');  
+                    icon.classList.add('fa-bars');  
+                });  
+            });  
+        }  
+
+        // Carrousel navigation  
+        const track = document.getElementById('bookCarousel');  
+        const prevBtn = document.getElementById('prevBtn');  
+        const nextBtn = document.getElementById('nextBtn');  
+
+        if (track && prevBtn && nextBtn) {  
+            const scrollAmount = 330;  
+              
+            prevBtn.addEventListener('click', () => {  
+                track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });  
+            });  
+              
+            nextBtn.addEventListener('click', () => {  
+                track.scrollBy({ left: scrollAmount, behavior: 'smooth' });  
+            });  
+        }  
+
+        // Animation au scroll  
+        const observerOptions = {  
+            threshold: 0.1,  
+            rootMargin: '0px 0px -50px 0px'  
+        };  
+
+        const observer = new IntersectionObserver((entries) => {  
+            entries.forEach(entry => {  
+                if (entry.isIntersecting) {  
+                    entry.target.style.opacity = '1';  
+                    entry.target.style.transform = 'translateY(0)';  
+                }  
+            });  
+        }, observerOptions);  
+
+        document.querySelectorAll('.testimonial-card, .carousel-item, .platform-btn, .social-btn').forEach(el => {  
+            el.style.opacity = '0';  
+            el.style.transform = 'translateY(30px)';  
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';  
+            observer.observe(el);  
+        });  
+    </script>  
+</body>  
+</html>
